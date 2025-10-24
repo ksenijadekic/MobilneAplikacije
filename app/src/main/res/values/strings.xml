@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">RMAS</string>
+
+    <!-- OVDE zalepiš Mapbox public (pk_) token -->
+    <string name="mapbox_access_token">pk.eyJ1Ijoia3NlbmlqYWRla2ljIiwiYSI6ImNtZ3JkaXA4ajA1cjQybXNhYWZxczl4a2cifQ.GJrNRFByI9s3S7bOlt8CsQ</string>
+</resources>

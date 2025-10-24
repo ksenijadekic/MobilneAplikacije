@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "182011489693",
+    "project_id": "rmas-d7481",
+    "storage_bucket": "rmas-d7481.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:182011489693:android:4748149860383e7947d374",
+        "android_client_info": {
+          "package_name": "com.example.rmas_projekat"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAh5mBPCpIVl3LHm7ALNH7hRkcsxhYSV5Y"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
