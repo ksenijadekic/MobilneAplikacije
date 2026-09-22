@@ -6,13 +6,23 @@ import android.net.Uri
 import android.os.Build
 import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
+import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Button
+import androidx.compose.material3.ButtonDefaults
+import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.Text
 import androidx.compose.runtime.*
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
+import com.example.rmas_projekat.ui.theme.OrangeDark
 import androidx.core.content.ContextCompat
 import androidx.core.content.FileProvider
 import java.io.File
@@ -67,16 +77,32 @@ fun ImagePickers(
         return FileProvider.getUriForFile(ctx, "${ctx.packageName}.fileprovider", file)
     }
 
-    Row(horizontalArrangement = Arrangement.spacedBy(12.dp)) {
-        Button(onClick = { ensurePermissions { pickImage.launch("image/*") } }) {
-            Text("Izaberi iz galerije")
+    Row(
+        modifier = Modifier.fillMaxWidth(),
+        horizontalArrangement = Arrangement.spacedBy(12.dp)
+    ) {
+        OutlinedButton(
+            onClick = { ensurePermissions { pickImage.launch("image/*") } },
+            shape = RoundedCornerShape(12.dp),
+            border = BorderStroke(1.5.dp, OrangeDark),
+            colors = ButtonDefaults.outlinedButtonColors(contentColor = OrangeDark),
+            modifier = Modifier.weight(1f).height(48.dp)
+        ) {
+            Text("Galerija", fontWeight = FontWeight.Bold)
         }
-        Button(onClick = {
-            ensurePermissions {
-                val uri = newImageUri()
-                tempPhotoUri = uri
-                takePicture.launch(uri)
-            }
-        }) { Text("Otvori kameru") }
+        Button(
+            onClick = {
+                ensurePermissions {
+                    val uri = newImageUri()
+                    tempPhotoUri = uri
+                    takePicture.launch(uri)
+                }
+            },
+            shape = RoundedCornerShape(12.dp),
+            colors = ButtonDefaults.buttonColors(containerColor = OrangeDark, contentColor = Color.White),
+            modifier = Modifier.weight(1f).height(48.dp)
+        ) {
+            Text("Kamera", fontWeight = FontWeight.Bold)
+        }
     }
 }

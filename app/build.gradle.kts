@@ -75,6 +75,7 @@ dependencies {
     // implementation("com.google.maps.android:maps-compose:4.4.1")
 
     // ✅ MAPBOX za MapsScreen (Compose ekran koji smo sredili)
-    implementation("com.mapbox.maps:android:11.15.3")
-    implementation("com.mapbox.extension:maps-compose:11.15.3")
+    // -ndk27 artefakti su poravnati na 16 KB (potrebno za 16 KB uređaje/emulatore)
+    implementation("com.mapbox.maps:android-ndk27:11.15.3")
+    implementation("com.mapbox.extension:maps-compose-ndk27:11.15.3")
 }
