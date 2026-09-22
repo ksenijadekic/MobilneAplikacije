@@ -46,7 +46,6 @@ import java.text.SimpleDateFormat
 import java.util.Date
 import java.util.Locale
 
-// Da li je servis za praćenje lokacije uključen (živi dok traje proces aplikacije)
 object TrackingState {
     var running by mutableStateOf(false)
 }

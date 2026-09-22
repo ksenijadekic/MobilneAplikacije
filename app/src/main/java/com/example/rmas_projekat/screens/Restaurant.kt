@@ -8,7 +8,6 @@ import androidx.compose.runtime.remember
 import com.google.firebase.firestore.DocumentSnapshot
 import com.google.firebase.firestore.FirebaseFirestore
 
-// Restoran = dokument iz kolekcije "objects" (ista polja kao i ranije + address, price_range)
 data class Restaurant(
     val id: String,
     val name: String,
@@ -50,7 +49,6 @@ fun DocumentSnapshot.toRestaurant(): Restaurant? {
     )
 }
 
-// Živa lista restorana; listener se skida kad ekran nestane
 @Composable
 fun rememberRestaurants(): State<List<Restaurant>> {
     val state = remember { mutableStateOf(listOf<Restaurant>()) }

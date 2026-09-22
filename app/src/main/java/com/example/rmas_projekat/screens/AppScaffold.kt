@@ -36,10 +36,6 @@ import com.example.rmas_projekat.ui.theme.StarEmpty
 import com.example.rmas_projekat.ui.theme.TextMuted
 import kotlin.math.roundToInt
 
-// ---------------------------------------------------------------------------
-// Okvir ekrana posle prijave: narandžasta gornja traka + donja navigacija
-// ---------------------------------------------------------------------------
-
 private data class Tab(val route: String, val label: String, val icon: ImageVector)
 
 private val tabs = listOf(
@@ -115,10 +111,6 @@ fun AppBottomBar(nav: NavController, current: String) {
         }
     }
 }
-
-// ---------------------------------------------------------------------------
-// Zajedničke komponente
-// ---------------------------------------------------------------------------
 
 @Composable
 fun SectionCard(title: String, content: @Composable ColumnScope.() -> Unit) {

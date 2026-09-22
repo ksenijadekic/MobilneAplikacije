@@ -62,20 +62,14 @@ dependencies {
     implementation("com.google.firebase:firebase-firestore-ktx")
     implementation("com.google.firebase:firebase-storage-ktx")
 
-    // (opciono)
     implementation("androidx.appcompat:appcompat:1.4.0")
     implementation("com.google.android.material:material:1.4.0")
     implementation("com.google.accompanist:accompanist-permissions:0.21.0-beta")
     implementation("io.coil-kt:coil-compose:2.1.0")
     implementation("androidx.activity:activity-compose:1.9.3")
 
-    // ✅ GOOGLE MAPS za MapsActivity (klasična View/Fmg API)
     implementation("com.google.android.gms:play-services-maps:18.2.0")
-    // (samo ako koristiš Google Maps Compose — za ovu aktivnost NE treba)
-    // implementation("com.google.maps.android:maps-compose:4.4.1")
 
-    // ✅ MAPBOX za MapsScreen (Compose ekran koji smo sredili)
-    // -ndk27 artefakti su poravnati na 16 KB (potrebno za 16 KB uređaje/emulatore)
     implementation("com.mapbox.maps:android-ndk27:11.15.3")
     implementation("com.mapbox.extension:maps-compose-ndk27:11.15.3")
 }

@@ -29,7 +29,6 @@ import com.example.rmas_projekat.ui.theme.OrangeDark
 import com.example.rmas_projekat.ui.theme.OrangeLight
 import com.example.rmas_projekat.ui.theme.OrangeText
 
-// Zajednički izgled za prijavu i registraciju: narandžasti gradijent + bela kartica sa formom.
 @Composable
 fun AuthScreenLayout(
     subtitle: String,
@@ -188,7 +187,6 @@ fun AuthButton(text: String, enabled: Boolean, onClick: () -> Unit) {
     }
 }
 
-// Link ispod kartice (tamna slova jer je donji deo gradijenta svetao)
 @Composable
 fun AuthLink(text: String, onClick: () -> Unit) {
     TextButton(onClick = onClick) {
